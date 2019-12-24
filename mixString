@@ -1,0 +1,41 @@
+public String mixString(String a, String b) {
+  int n=a.length();
+  int m=b.length();
+  int i=0,j=0;
+  String s="";
+  if(m==n)
+  {
+    while(i<m)
+    {
+      s=s+a.charAt(i)+b.charAt(i);
+      i++;
+    }
+  }
+  else if(m>n)
+  {
+    while(i<m)
+    {
+      if(j<n)
+      {
+        s=s+a.charAt(j);
+        j++;
+      }
+      s=s+b.charAt(i);
+      i++;
+    }
+  }
+  else
+  {
+   while(i<n)
+    {
+      s=s+a.charAt(i);
+      i++;
+      if(j<m)
+      {
+        s=s+b.charAt(j);
+        j++;
+      }
+    } 
+  }
+  return s;
+}
